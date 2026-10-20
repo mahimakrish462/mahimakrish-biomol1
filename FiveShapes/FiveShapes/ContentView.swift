@@ -20,7 +20,11 @@ struct ContentView: View {
             Text("Five Shapes")
                 .font(.largeTitle)
 
-            ToggleImmersiveSpaceButton()
+            Button("Show Shapes") {
+                Task {
+                    await openImmersiveSpace(id: "ImmersiveSpace")
+                }
+            }
             
         }
         .padding()
